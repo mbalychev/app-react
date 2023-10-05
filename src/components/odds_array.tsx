@@ -32,14 +32,17 @@ export const OddsArray = () => {
         (a.toString() === b.toString()) ? <Tag color={'green'} bordered={false} style={{ opacity: '0.5', marginLeft: '10px' }}>ok</Tag> : <Tag color={'red'} bordered={false} style={{ opacity: '0.5', marginLeft: '10px' }}>wrong</Tag>
     )
 
-    return <List
-        dataSource={res}
-        renderItem={(e) =>
-            <div style={{ textAlign: 'left' }}>
-                reques: {e.req};
-                answer: <span style={{ opacity: '0.5', marginLeft: '10px' }}>{e.ans}</span> ?= {e.res}
-                {resTag(e.res, e.ans)}
-            </div>
-        }
-    />
+    return <>
+        <h3>7 kyu</h3>
+        <List
+            dataSource={res}
+            renderItem={(e) =>
+                <div style={{ textAlign: 'left' }}>
+                    reques: {e.req};
+                    answer: <span style={{ opacity: '0.5', marginLeft: '10px' }}>{e.ans}</span> ?= {e.res}
+                    {resTag(e.res, e.ans)}
+                </div>
+            }
+        />
+    </>
 }
