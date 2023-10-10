@@ -1,0 +1,18 @@
+.paragraph {
+    text-align: left;
+    width: 90%;
+    padding: 5%;
+}
+
+.taskParagrph {
+    text-indent: 10px;
+}
+
+.display-linebreak {
+    white-space: pre-line;
+}
+
+h5 {
+    text-align: left;
+    margin-left: 20px;
+}
