@@ -1,11 +1,12 @@
 import { List, Typography } from 'antd';
-
+import { FC, memo } from 'react'
 export interface ILink {
     link: string;
     title: string;
     decriptions: string;
 }
-export const ArraysPage = () => {
+
+const ArraysPage: FC = () => {
     const { Text, Link, Title } = Typography;
 
     const listsLinks: ILink[] = [{
@@ -15,7 +16,7 @@ export const ArraysPage = () => {
     }]
 
     return <div>
-        <Title level={4}>
+        <Title level={3}>
             Массивы
         </Title>
         <List
@@ -24,3 +25,5 @@ export const ArraysPage = () => {
         />
     </div>
 }
+
+export default memo(ArraysPage);
