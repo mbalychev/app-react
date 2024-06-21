@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import LayoutPage from "./layouts/main/mainLayout"
 import DataType from "./others/dataType"
-import MainPage from "./pages/mainPage"
 import AboutPage from "./pages/aboutPage"
 import ProgrammPage from "./pages/programmPage"
+import MainPage from "./pages/mainPages/mainPage"
 
 export const links = {
     algoritms: '/algoritms',
