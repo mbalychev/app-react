@@ -1,10 +1,9 @@
-import { Typography } from "antd";
 import { FC, memo } from "react";
 
 const DataType: FC = () => {
 
 
-    return <Typography.Title level={3}>Типы данных</Typography.Title>;
+    return <h3>Типы данных</h3>;
 }
 
 export default memo(DataType);
