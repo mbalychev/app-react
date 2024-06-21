@@ -1,8 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import AlgoritmsPage from "./pages/algoritmsPage"
 import ArraysPage from "./pages/arraysPage"
-import { LayoutPage } from "./LayoutPage"
+import LayoutPage from "./layouts/main/mainLayout"
 import DataType from "./others/dataType"
+import MainPage from "./pages/mainPage"
+import AboutPage from "./pages/aboutPage"
+import ProgrammPage from "./pages/programmPage"
 
 export const links = {
     algoritms: '/algoritms',
@@ -16,9 +19,9 @@ export const Router = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<LayoutPage />}>
-                    <Route path="/algoritms" element={<AlgoritmsPage />} />
-                    <Route path="/arrays" element={<ArraysPage />} />
-                    <Route path="/others" element={<DataType />} />
+                    <Route path="/" element={<MainPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/programm" element={<ProgrammPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>
