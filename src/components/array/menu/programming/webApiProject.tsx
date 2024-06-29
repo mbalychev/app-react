@@ -5,7 +5,7 @@ import { ContainerProject, HeaderH4, Label, List, ListItem, OrderedList, Ordered
 
 const WebApiProject: FC = () => {
     return (
-        <ContainerProject>
+        <>
             <HeaderH4>Чтение данных из БД</HeaderH4>
             <List>
                 <ListItem>
@@ -48,7 +48,7 @@ const WebApiProject: FC = () => {
                     <OrderedListItem>Отправка ответа на запрос</OrderedListItem>
                 </OrderedList>
             </Paragraph>
-        </ContainerProject>
+        </>
     );
 };
 
