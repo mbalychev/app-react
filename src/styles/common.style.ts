@@ -10,6 +10,11 @@ export const colors = {
     border: "#e0e0e0",
 };
 
+export const SmallIcon = styled.img`
+width: 24px;
+height: 24px;
+`
+
 export const ContainerProject = styled.div`
   max-width: 800px;
   margin: 0 auto;

@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import { Outlet } from 'react-router-dom';
 import MainMenu from '../../components/array/menu/menu';
 import { DivContent, DivFooter, DivHeader, Layout } from './mainLayout.style';
+import Footer from '../../components/array/menu/footer';
 
 
 const LayoutPage = () => {
@@ -13,9 +14,7 @@ const LayoutPage = () => {
     <DivContent>
       <Outlet />
     </DivContent>
-    <DivFooter>
-      footer 2024
-    </DivFooter>
+    <Footer />
   </Layout>
 }
 

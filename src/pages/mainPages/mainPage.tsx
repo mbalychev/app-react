@@ -1,6 +1,9 @@
 import React, { memo } from 'react';
 import photo from '../../public/img/bmm.png'
-import { Photo, PhotoBlock } from './mainPage.style';
+import { LinkDiv, LinkToAnotherSrc, Photo, PhotoBlock } from './mainPage.style';
+import { SmallIcon } from '../../styles/common.style';
+import telegrammIcon from '../../public/icons/telegrammIcon.png'
+import emailIcon from '../../public/icons/emailIcon.png'
 
 const MainPage = () => {
     const skills = [
@@ -30,6 +33,16 @@ const MainPage = () => {
                 <p>
                     Михаил Балычев<br />
                     Frontend-разработчик
+                </p>
+                <p>
+                    <LinkDiv>
+                        <SmallIcon src={telegrammIcon} />
+                        <LinkToAnotherSrc href="https://t.me/+79157004030">+79157004030</LinkToAnotherSrc>
+                    </LinkDiv>
+                    <LinkDiv>
+                        <SmallIcon src={emailIcon} />
+                        <LinkToAnotherSrc href="mailto:mbalychev@yandex.ru">mbalychev@yandex.ru</LinkToAnotherSrc>
+                    </LinkDiv>
                 </p>
             </PhotoBlock>
 
