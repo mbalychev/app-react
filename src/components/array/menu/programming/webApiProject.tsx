@@ -1,55 +1,55 @@
-import { FC } from "react"
-import { Header4, Li, Ol, P, Ul } from "../../../../styles/common.style"
+import React, { FC } from "react";
+import styled from "styled-components";
+import { ContainerProject, HeaderH4, Label, List, ListItem, OrderedList, OrderedListItem, Paragraph, Value } from "../../../../styles/common.style";
+
 
 const WebApiProject: FC = () => {
-
-    return <>
-        <Header4>
-            Четение данныез из БД
-        </Header4>
-        <Ul>
-            <Li>
-                тип проекта:&emsp;Web API
-            </Li>
-            <Li>
-                архитектура:&emsp;Rest
-            </Li>
-            <Li>
-                стек:&emsp;C#,LINQ
-            </Li>
-            <Li>
-                база данных:&emsp;Posgress
-            </Li>
-            <Li>
-                библиотеки:&emsp;Entity framework
-            </Li>
-            <Li>
-                цель:&emsp;Предоставление данных по запросу
-            </Li>
-            <Li>
-                документорование:&emsp;swagger
-            </Li>
-        </Ul>
-        <P>
-            Используя протокол HTTP клиент отправляет запрос на сервер, используя соответсвующий метод (POST, GET..).
-            При обмене данных используется формат JSON.
-            Приложение обрабатывает запрос следующим способом:
-            <Ol>
-                <Li>
-                    валидация токена
-                </Li>
-                <Li>
-                    валидация модели запроса (типизация данных)
-                </Li>
-                <Li>
-                    запрос к базе данных используя EF, LINQ
-                </Li>
-                <Li>
-                    отправка ответа на запрос
-                </Li>
-            </Ol>
-        </P>
-    </>
-}
+    return (
+        <ContainerProject>
+            <HeaderH4>Чтение данных из БД</HeaderH4>
+            <List>
+                <ListItem>
+                    <Label>Тип проекта:</Label>
+                    <Value>Web API</Value>
+                </ListItem>
+                <ListItem>
+                    <Label>Архитектура:</Label>
+                    <Value>Rest</Value>
+                </ListItem>
+                <ListItem>
+                    <Label>Стек:</Label>
+                    <Value>C#, LINQ</Value>
+                </ListItem>
+                <ListItem>
+                    <Label>База данных:</Label>
+                    <Value>Postgres</Value>
+                </ListItem>
+                <ListItem>
+                    <Label>Библиотеки:</Label>
+                    <Value>Entity Framework</Value>
+                </ListItem>
+                <ListItem>
+                    <Label>Цель:</Label>
+                    <Value>Предоставление данных по запросу</Value>
+                </ListItem>
+                <ListItem>
+                    <Label>Документирование:</Label>
+                    <Value>Swagger</Value>
+                </ListItem>
+            </List>
+            <Paragraph>
+                Используя протокол HTTP, клиент отправляет запрос на сервер, используя соответствующий метод (POST, GET...).
+                При обмене данными используется формат JSON.
+                Приложение обрабатывает запрос следующим способом:
+                <OrderedList>
+                    <OrderedListItem>Валидация токена</OrderedListItem>
+                    <OrderedListItem>Валидация модели запроса (типизация данных)</OrderedListItem>
+                    <OrderedListItem>Запрос к базе данных используя EF, LINQ</OrderedListItem>
+                    <OrderedListItem>Отправка ответа на запрос</OrderedListItem>
+                </OrderedList>
+            </Paragraph>
+        </ContainerProject>
+    );
+};
 
 export default WebApiProject;

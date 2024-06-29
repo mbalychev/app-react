@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../../styles/common.style";
 
 
 interface DropdownContentProps {
@@ -32,7 +33,7 @@ export const MenuButtonStyled = styled.button.attrs<MenuButtonProps>((props) => 
 min-width: 160px;
   padding: 10px 20px;
   margin: 0 10px;
-  background-color: ${(props) => (props.isActive ? '#b6d7d8' : '#f0f0f0')} ;
+  background-color: ${(props) => (props.isActive ? colors.primaryLight : '#f0f0f0')} ;
   border: 1px #d6d6d6;
   border-radius: 4px;
   cursor: pointer;
@@ -81,7 +82,7 @@ export const DropdownItemStyled = styled.div.attrs<MenuButtonProps>((props) => (
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  background-color: ${(props) => (props.isActive ? '#b6d7d8' : '#f0f0f0')} ;
+  background-color: ${(props) => (props.isActive ? ' ${colors.primaryLight}' : '#f0f0f0')} ;
   &:hover {
     background-color: #83cbce;
   }
