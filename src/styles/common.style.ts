@@ -32,9 +32,17 @@ export const HeaderH1 = styled.h1`
   padding-bottom: 0.5rem;
 `;
 
+export const HeaderH3 = styled.h4`
+  color: ${colors.secondary};
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid ${colors.primary};
+  padding-bottom: 0.5rem;
+`;
+
 export const HeaderH4 = styled.h4`
   color: ${colors.secondary};
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   margin-bottom: 1.5rem;
   border-bottom: 2px solid ${colors.primary};
   padding-bottom: 0.5rem;
@@ -72,6 +80,7 @@ export const Paragraph = styled.p`
   color: ${colors.text};
   line-height: 1.6;
   margin-top: 1.5rem;
+  text-align: justify;
 `;
 
 export const OrderedList = styled.ol`
@@ -82,4 +91,24 @@ export const OrderedList = styled.ol`
 export const OrderedListItem = styled.li`
   color: ${colors.text};
   margin-bottom: 0.5rem;
+`;
+
+
+export const LinkToAnotherSrc = styled.a`
+    color: ${colors.secondary};
+    text-decoration: none;
+    margin-left: 0.5rem;
+    &:hover {
+        text-decoration: underline;
+        }
+        `;
+
+export const LinkToDiv = styled.a`
+    color: ${colors.secondary};
+    margin-left: 0.5rem;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+    }
 `;

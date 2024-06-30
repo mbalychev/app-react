@@ -1,33 +1,37 @@
 import styled from "styled-components";
 import { colors } from "../../styles/common.style";
 
-export const PhotoBlock = styled.div`
-width: 10%;
-margin-left: auto;
-margin-right: 5%;
-text-align: center;
-`
-
-export const Photo = styled.img`
-width: 60%;
-border-radius: 6px;
-`
-
-
-export const LinkDiv = styled.div`
-width: 100%;
-display: flex;
-gap: 4px;
-align-items: center;
-flex-direction: row;
-margin: 0.5rem 0;
-font-size: 0.9rem;
+export const SubHeader = styled.p`
+    color: ${colors.lightText};
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
 `;
 
-export const LinkToAnotherSrc = styled.a`
-  color: ${colors.primary};
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
+
+export const Photo = styled.img`
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+`;
+
+export const PhotoBlock = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+`;
+
+export const LinkDiv = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+`;
+
+export const SkillTag = styled.span`
+    margin-right: 5px;
+    padding: 2px 5px;
+    background-color: ${colors.border};
+    color: ${colors.secondary};
+    border-radius: 3px;
 `;

@@ -1,126 +1,131 @@
-import React, { memo } from 'react';
+import React, { memo, useRef } from 'react';
 import photo from '../../public/img/bmm.png'
-import { LinkDiv, LinkToAnotherSrc, Photo, PhotoBlock } from './mainPage.style';
-import { SmallIcon } from '../../styles/common.style';
 import telegrammIcon from '../../public/icons/telegrammIcon.png'
 import emailIcon from '../../public/icons/emailIcon.png'
+import {
+    ContainerProject,
+    HeaderH4,
+    List,
+    ListItem,
+    Label,
+    Value,
+    Paragraph,
+    OrderedList,
+    OrderedListItem,
+    SmallIcon,
+    colors,
+    HeaderH3,
+    LinkToDiv,
+    LinkToAnotherSrc
+} from '../../styles/common.style';
+import styled from 'styled-components';
+import { LinkDiv, Photo, PhotoBlock, SkillTag, SubHeader } from './mainPage.style';
 
 const MainPage = () => {
     const skills = [
-        'C#',
-        'MS SQL',
-        'Entity Framework',
-        'ASP.NET',
-        'MS Visual Studio',
-        'Git',
-        'ООП',
-        'ASP.NET Core',
-        'React TS',
-        'ASP.NET',
-        'REST API',
-        'ReactJS',
-        'HTML5',
-        'JSON API',
-        'Redux',
-        'CSS3',
-        'TypeScript',
+        'C#', 'MS SQL', 'Entity Framework', 'ASP.NET', 'MS Visual Studio', 'Git', 'ООП',
+        'ASP.NET Core', 'React TS', 'REST API', 'ReactJS', 'HTML5', 'JSON API',
+        'Redux', 'CSS3', 'TypeScript',
     ];
 
+    const contactsRef = useRef<HTMLDivElement>(null);
+
     return (
-        <div style={{ padding: '20px' }}>
-            <PhotoBlock>
-                <Photo src={photo} />
-                <p>
-                    Михаил Балычев<br />
-                    Frontend-разработчик
-                </p>
-                <p>
-                    <LinkDiv>
-                        <SmallIcon src={telegrammIcon} />
-                        <LinkToAnotherSrc href="https://t.me/+79157004030">+79157004030</LinkToAnotherSrc>
-                    </LinkDiv>
-                    <LinkDiv>
-                        <SmallIcon src={emailIcon} />
-                        <LinkToAnotherSrc href="mailto:mbalychev@yandex.ru">mbalychev@yandex.ru</LinkToAnotherSrc>
-                    </LinkDiv>
-                </p>
+        <ContainerProject>
+            <HeaderH3 style={{ textAlign: 'center' }}>Здравствуйте и добро пожаловать на мой сайт!</HeaderH3>
+            <PhotoBlock ref={contactsRef}>
+                <Photo src={photo} alt="Михаил Балычев" />
+                <HeaderH4>Михаил Балычев</HeaderH4>
+                <SubHeader>разработчик</SubHeader>
+                <LinkDiv ref={contactsRef}>
+                    <SmallIcon src={telegrammIcon} alt="Telegram" />
+                    <LinkToAnotherSrc href="https://t.me/+79157004030">+79157004030</LinkToAnotherSrc>
+                </LinkDiv>
+                <LinkDiv>
+                    <SmallIcon src={emailIcon} alt="Email" />
+                    <LinkToAnotherSrc href="mailto:mbalychev@yandex.ru">mbalychev@yandex.ru</LinkToAnotherSrc>
+                </LinkDiv>
             </PhotoBlock>
 
-            <p>
-                Добро пожаловать на мою страницу-презентацию! Здесь я расскажу о своих возможностях как программиста, основываясь на моем резюме.
-            </p>
+            <Paragraph>
+                Здесь вы найдете подробную информацию о моих навыках и опыте в сфере программирования. На этом ресурсе представлены:
+                <List>
+                    <ListItem>
+                        Мое портфолио с примерами реализованных проектов
+                    </ListItem>
+                    <ListItem>
+                        Список технологий и языков программирования, которыми я владею
+                    </ListItem>
+                    <ListItem>
+                        Описание моего опыта работы в различных областях разработки
+                    </ListItem>
+                    <ListItem>
+                        Информация о моем образовании и профессиональном развитии
+                    </ListItem>
+                </List>
+                Надеюсь, этот сайт поможет вам составить полное представление о моих возможностях как разработчика. Если у вас возникнут вопросы или предложения о сотрудничестве, не стесняйтесь
+                <LinkToDiv onClick={() => contactsRef.current?.scrollIntoView({ behavior: 'smooth' })}>связаться</LinkToDiv> со мной.
+                Приятного просмотра!
+            </Paragraph>
 
-            <hr />
+            <HeaderH4>Опыт работы</HeaderH4>
+            <Paragraph>
+                Я имею более 3 лет опыта работы в качестве разработчика. Работал в таких компаниях, как ООО "Профессиональный партнер", ООО ИК "СИБИНТЕК" и других.
+            </Paragraph>
 
-            <h2>Опыт работы</h2>
-            <p>
-                Я имею более 5 лет опыта работы в качестве разработчика. Работал в таких компаниях, как ООО "Профессиональный партнер", ООО ИК "СИБИНТЕК" и других.
-            </p>
-
-            <p>
+            <Paragraph>
                 <strong>Последний проект:</strong> Разработка веб-интерфейса внутренней CRM-системы для ООО "Профессиональный партнер" с использованием следующих технологий:
-            </p>
+            </Paragraph>
 
-            <ul>
-                <li>React 18.2</li>
-                <li>TypeScript 4.6</li>
-                <li>effector (state-менеджер)</li>
-                <li>styled-components</li>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>react-query (кеширование данных)</li>
-                <li>fetch (запросы к API)</li>
-                <li>dayjs (работа с датами)</li>
-                <li>react-router-dom (навигация)</li>
-                <li>socket.io-client (получение сообщений от сервера)</li>
-            </ul>
-
-            <hr />
-
-            <h2>Образование</h2>
-            <p>
-                Высшее образование: Комсомольский-на-Амуре государственный технический университет, специальность "Программное обеспечение вычислительной техники и автоматизированных систем".
-            </p>
-
-            <hr />
-
-            <h2>Ключевые навыки</h2>
-            <p>
-                <strong>Языки:</strong> Русский (родной)
-            </p>
-            <p>
-                <strong>Навыки:</strong>
-                {skills.map((skill) => (
-                    <span key={skill} style={{ marginRight: '5px', padding: '2px 5px', backgroundColor: 'blue', color: 'white' }}>
-                        {skill}
-                    </span>
+            <List>
+                {['React 18.2', 'TypeScript 4.6', 'effector (state-менеджер)', 'styled-components', 'CSS', 'HTML', 'react-query (кеширование данных)', 'fetch (запросы к API)', 'dayjs (работа с датами)', 'react-router-dom (навигация)', 'socket.io-client (получение сообщений от сервера)'].map((tech) => (
+                    <ListItem key={tech}>{tech}</ListItem>
                 ))}
-            </p>
+            </List>
 
-            <hr />
+            <HeaderH4>Образование</HeaderH4>
+            <Paragraph>
+                Высшее образование: Комсомольский-на-Амуре государственный технический университет, специальность "Программное обеспечение вычислительной техники и автоматизированных систем".
+            </Paragraph>
 
-            <h2>Дополнительная информация</h2>
-            <p>
+            <HeaderH4>Ключевые навыки</HeaderH4>
+            <List>
+                <ListItem>
+                    <Label>Языки:</Label>
+                    <Value>Русский (родной)</Value>
+                </ListItem>
+                <ListItem>
+                    <Label>Навыки:</Label>
+                    <Value>
+                        {skills.map((skill) => (
+                            <SkillTag key={skill}>{skill}</SkillTag>
+                        ))}
+                    </Value>
+                </ListItem>
+            </List>
+
+            <HeaderH4>Дополнительная информация</HeaderH4>
+            <Paragraph>
                 Готов к работе на удаленной основе (организованное рабочее место, стабильная связь). Готов выполнить тестовое задание.
-            </p>
-            <p>
+            </Paragraph>
+            <Paragraph>
                 Примеры моих работ:
-                <ul>
-                    <li>
-                        <code>WebAPI</code> (ASP.NET, C#, Entity Framework Core, PostgreSQL):{' '}
-                        <a href="https://github.com/mbalychev/flights" target="_blank" rel="noopener noreferrer">
-                            https://github.com/mbalychev/flights
-                        </a>
-                    </li>
-                    <li>
-                        <code>FrontEnd</code> (React, TypeScript):{' '}
-                        <a href="https://github.com/mbalychev/flights.front" target="_blank" rel="noopener noreferrer">
-                            https://github.com/mbalychev/flights.front
-                        </a>
-                    </li>
-                </ul>
-            </p>
-        </div>
+            </Paragraph>
+            <OrderedList>
+                <OrderedListItem>
+                    <strong>WebAPI</strong> (ASP.NET, C#, Entity Framework Core, PostgreSQL):{' '}
+                    <LinkToAnotherSrc href="https://github.com/mbalychev/flights" target="_blank" rel="noopener noreferrer">
+                        https://github.com/mbalychev/flights
+                    </LinkToAnotherSrc>
+                </OrderedListItem>
+                <OrderedListItem>
+                    <strong>FrontEnd</strong> (React, TypeScript):{' '}
+                    <LinkToAnotherSrc href="https://github.com/mbalychev/flights.front" target="_blank" rel="noopener noreferrer">
+                        https://github.com/mbalychev/flights.front
+                    </LinkToAnotherSrc>
+                </OrderedListItem>
+            </OrderedList>
+        </ContainerProject>
     );
 };
 
