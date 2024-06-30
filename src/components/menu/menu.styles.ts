@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../styles/common.style";
+import { colors } from "../../styles/common.style";
 
 
 interface DropdownContentProps {

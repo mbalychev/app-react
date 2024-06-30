@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import styled from "styled-components";
-import { ContainerProject, HeaderH4, Label, List, ListItem, OrderedList, OrderedListItem, Paragraph, Value } from "../../../../styles/common.style";
+import { ContainerProject, HeaderH4, Label, List, ListItem, OrderedList, OrderedListItem, Paragraph, Value } from "../../styles/common.style";
 
 
 const WebApiProject: FC = () => {

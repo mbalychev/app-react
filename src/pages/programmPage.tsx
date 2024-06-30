@@ -1,7 +1,7 @@
 import { FC, memo } from "react";
 import { MainDiv } from "./programmPage.styles";
 import { ContainerProject } from "../styles/common.style";
-import WebApiProject from "../components/array/menu/programming/webApiProject";
+import WebApiProject from "../components/programming/webApiProject";
 
 const ProgrammPage: FC = () => {
 
