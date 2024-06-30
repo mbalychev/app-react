@@ -1,5 +1,4 @@
-import React, { memo, useRef } from 'react';
-import photo from '../../public/img/bmm.png'
+import React, { memo, useRef, lazy, Suspense } from 'react';
 import telegrammIcon from '../../public/icons/telegrammIcon.png'
 import emailIcon from '../../public/icons/emailIcon.png'
 import {
@@ -13,13 +12,13 @@ import {
     OrderedList,
     OrderedListItem,
     SmallIcon,
-    colors,
     HeaderH3,
     LinkToDiv,
     LinkToAnotherSrc
 } from '../../styles/common.style';
-import styled from 'styled-components';
-import { LinkDiv, Photo, PhotoBlock, SkillTag, SubHeader } from './mainPage.style';
+import { LinkDiv, PhotoBlock, SkillTag, SubHeader } from './mainPage.style';
+import Loading from '../../components/loading';
+const MyPhoto = lazy(() => import('./photo'));
 
 const MainPage = () => {
     const skills = [
@@ -34,7 +33,9 @@ const MainPage = () => {
         <ContainerProject>
             <HeaderH3 style={{ textAlign: 'center' }}>Здравствуйте и добро пожаловать на мой сайт!</HeaderH3>
             <PhotoBlock ref={contactsRef}>
-                <Photo src={photo} alt="Михаил Балычев" />
+                <Suspense fallback={<Loading />}>
+                    <MyPhoto />
+                </Suspense>
                 <HeaderH4>Михаил Балычев</HeaderH4>
                 <SubHeader>разработчик</SubHeader>
                 <LinkDiv ref={contactsRef}>
