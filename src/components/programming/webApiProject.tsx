@@ -18,7 +18,7 @@ const WebApiProject: FC = () => {
                 </ListItem>
                 <ListItem>
                     <Label>Стек:</Label>
-                    <Value>C#, LINQ</Value>
+                    <Value>C#</Value>
                 </ListItem>
                 <ListItem>
                     <Label>База данных:</Label>
@@ -26,15 +26,15 @@ const WebApiProject: FC = () => {
                 </ListItem>
                 <ListItem>
                     <Label>Библиотеки:</Label>
-                    <Value>Entity Framework</Value>
+                    <Value>Entity Framework, LINQ</Value>
                 </ListItem>
                 <ListItem>
                     <Label>Цель:</Label>
                     <Value>Предоставление данных по запросу</Value>
                 </ListItem>
                 <ListItem>
-                    <Label>Документирование:</Label>
-                    <Value>Swagger</Value>
+                    <Label>Особенности:</Label>
+                    <Value>Swagger, асинхронные операции, паттерн MVC</Value>
                 </ListItem>
             </List>
             <Paragraph>
